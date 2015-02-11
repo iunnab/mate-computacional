@@ -7,3 +7,12 @@ def TransfPolarCart(r,t,f):
     
     return x,y,z
     
+    
+from math import asin, acos, sqrt
+
+def TransfCartPolar(x,y,z):
+    r= sqrt(x*x+y*y+z*z)
+    f= acos(z/r)
+    t= asin(y/(r*sin(f)))
+    
+    return r,t,f
